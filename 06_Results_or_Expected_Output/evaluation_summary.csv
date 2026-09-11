@@ -1,0 +1,4 @@
+Technique,Classification Accuracy (%),Re-Identification Risk (%),Execution Time (ms)
+Baseline (Raw Data),84.04,0.12,0.00
+K-Anonymity (k=3),84.67,0.00,18.00
+Differential Privacy (epsilon=1.0),80.63,36.99,15.00
