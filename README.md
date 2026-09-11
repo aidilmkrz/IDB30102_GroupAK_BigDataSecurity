@@ -1,4 +1,4 @@
-Markdown# IDB30102 - Research Methodology
+# IDB30102 - Research Methodology
 
 ## A Comparative Evaluation of k-Anonymity and Differential Privacy in Big Data Systems
 
@@ -25,22 +25,22 @@ Markdown# IDB30102 - Research Methodology
 📖 **Project Overview**
 
 ### Research Problem
-* **Inconsistent Evaluation Standards (PS1):** $k$-Anonymity and Differential Privacy are frequently evaluated in literature using different metrics, experimental setups, and datasets, making direct comparative assessment difficult.
+* **Inconsistent Evaluation Standards (PS1):** k-Anonymity and Differential Privacy are frequently evaluated in literature using different metrics, experimental setups, and datasets, making direct comparative assessment difficult.
 * **Lack of Benchmarking Criteria (PS2):** There is limited consistent comparison between the two techniques using unified criteria such as accuracy, re-identification risk, and execution time under identical conditions.
 
 ### Research Aim
-To conduct a direct, standardized comparative evaluation of $k$-Anonymity and Differential Privacy in big data systems based on three key performance metrics: classification accuracy, re-identification risk, and execution time.
+To conduct a direct, standardized comparative evaluation of k-Anonymity and Differential Privacy in big data systems based on three key performance metrics: classification accuracy, re-identification risk, and execution time.
 
 ### Research Objectives
-* **RO1:** To review existing literature on $k$-Anonymity and Differential Privacy techniques in big data systems.
-* **RO2:** To implement $k$-Anonymity and Differential Privacy using a custom Python implementation (`anonymization_framework.py`) on the UCI Adult Census Income dataset.
+* **RO1:** To review existing literature on k-Anonymity and Differential Privacy techniques in big data systems.
+* **RO2:** To implement k-Anonymity and Differential Privacy using a custom Python implementation (`anonymization_framework.py`) on the UCI Adult Census Income dataset.
 * **RO3:** To evaluate and compare both techniques against the original, unprotected dataset using accuracy, re-identification risk, and execution time as primary metrics.
 
 ### Implementation Scope
 The evaluation framework processes raw tabular data through two privacy-preserving techniques alongside an unprotected baseline:
 * **Baseline (Raw Data):** Unprotected original dataset.
-* **$k$-Anonymity ($k=3$):** Applies quasi-identifier generalization (age range categorization, marital-status grouping) and suppression.
-* **Differential Privacy ($\epsilon=1.0$):** Injects calibrated Laplace noise into numerical attributes to provide formal privacy guarantees.
+* **k-Anonymity (k=3):** Applies quasi-identifier generalization (age range categorization, marital-status grouping) and suppression.
+* **Differential Privacy (ε=1.0):** Injects calibrated Laplace noise into numerical attributes to provide formal privacy guarantees.
 
 ---
 
@@ -51,7 +51,7 @@ This study adopts a data-driven research approach following the CRISP-DM (Cross-
 1. **Business Understanding:** Define research problems, trade-off scope, and evaluation criteria.
 2. **Data Understanding:** Analyze UCI Adult Census Income dataset attributes and quasi-identifiers.
 3. **Data Preparation:** Preprocess tabular features and construct anonymization transformation functions.
-4. **Modelling:** Treat $k$-Anonymity and Differential Privacy as separate comparison treatments.
+4. **Modelling:** Treat k-Anonymity and Differential Privacy as separate comparison treatments.
 5. **Evaluation:** Benchmark accuracy, re-identification risk, and processing time against baseline.
 6. **Deployment:** Document comparative results, findings, and maintain GitHub repository.
 
@@ -80,7 +80,42 @@ This study adopts a data-driven research approach following the CRISP-DM (Cross-
                                 │
                                 ▼
                      [ Comparative Results ]
-🧪 Evaluation Plan & MetricsBaseline: Original unmodified UCI Adult dataset.Dataset / Test Environment:Dataset: UCI Adult Census Income Benchmark Dataset (adult.data).Environment: Python 3.8+ running local execution environment.Evaluation Metrics:Classification Accuracy (%): Evaluates data utility retained after privacy treatment.Re-Identification Risk (%): Measures residual vulnerability to linkage attacks.Execution Time (ms): Measures computational performance and algorithm latency.💻 Technical StackProgramming Language: Python 3.8+Libraries: pandas, numpy, scikit-learnBenchmark Dataset: UCI Adult Census Income Dataset (adult.data)Environment: VS Code / Command Prompt / Git & GitHub📂 Repository StructurePlaintextIDB30102_GroupAK_BigDataSecurity/
+```
+---
+
+🧪 Evaluation Plan & Metrics
+
+Baseline: Original unmodified UCI Adult dataset.
+
+Dataset / Test Environment:
+
+Dataset: UCI Adult Census Income Benchmark Dataset (adult.data).
+
+Environment: Python 3.8+ running local execution environment.
+
+Evaluation Metrics:
+
+Classification Accuracy (%): Evaluates data utility retained after privacy treatment.
+
+Re-Identification Risk (%): Measures residual vulnerability to linkage attacks.
+
+Execution Time (ms): Measures computational performance and algorithm latency.
+
+.
+
+💻 Technical Stack
+
+Programming Language: Python 3.8+
+
+Libraries: pandas, numpy, scikit-learn
+
+Benchmark Dataset: UCI Adult Census Income Dataset (adult.data)
+
+Environment: VS Code / Command Prompt / Git & GitHub
+
+📂 Repository Structure
+
+IDB30102_GroupAK_BigDataSecurity/
 ├── README.md                          # Comprehensive project overview and instructions
 ├── 01_Research_Papers/                # Primary literature resources and references
 ├── 02_Literature_Review/              # Literature review synthesis and matrix
@@ -89,7 +124,35 @@ This study adopts a data-driven research approach following the CRISP-DM (Cross-
 ├── 05_Data_or_Sample_Input/           # Benchmark datasets (adult.data)
 ├── 06_Results_or_Expected_Output/     # Metric evaluation logs, output figures, and tables (evaluation_summary.csv)
 └── 07_References/                     # Reference citations formatted in APA 7th Edition
-🚀 Getting Started & Running the Code1. InstallationEnsure Python 3.8+ is installed, then install the required dependencies:Bashpip install pandas numpy scikit-learn
-2. ExecutionNavigate to the 04_Source_Code/ directory and execute the evaluation suite:Bashcd 04_Source_Code
+
+🚀 Getting Started & Running the Code
+
+1. Installation
+Ensure Python 3.8+ is installed, then install the required dependencies:
+
+Bash
+pip install pandas numpy scikit-learn
+2. Execution
+Navigate to the 04_Source_Code/ directory and execute the evaluation suite:
+
+Bash
+cd 04_Source_Code
 python run_evaluation.py
-📊 Summary of Results (Parts 4, 5, & 6 Evaluation)Empirical evaluation executed on the local benchmark testbed (04_Source_Code/run_evaluation.py) yielded the following real-time performance metrics:Technique / TreatmentClassification Accuracy (%)Re-Identification Risk (%)Execution Time (ms)Baseline (Raw Data)84.04%0.12%0.00 msk-Anonymity ($k=3$)84.67%0.00%18.00 msDifferential Privacy ($\epsilon=1.0$)80.63%36.99%15.00 msKey Experimental Findings:Utility Preservation: $k$-Anonymity ($k=3$) retained high classification utility (84.67%) while effectively suppressing unique quasi-identifier combinations down to a 0.00% re-identification risk across the evaluated feature subset.Noise Impact on Trade-offs: Differential Privacy ($\epsilon=1.0$) introduced Laplace perturbation, yielding an 80.63% utility accuracy. The perturbation of continuous numerical values created distinct value distribution patterns, producing a calculated local re-ID risk metric of 36.99%.Execution Performance: Both privacy mechanisms demonstrated high operational efficiency on the UCI Adult benchmark, completing execution in under 20 milliseconds (18 ms for $k$-Anonymity vs. 15 ms for Differential Privacy).📜 Acknowledgments & CitationThis project is submitted to Dr. Delina Beh Mei Yin in partial fulfillment of the requirements for IDB30102 Research Methodology, Bachelor of Cybersecurity Technology with Honours, University of Kuala Lumpur (UniKL).
+📊 Summary of Results (Parts 4, 5, & 6 Evaluation)
+
+Empirical evaluation executed on the local benchmark testbed (04_Source_Code/run_evaluation.py) yielded the following real-time performance metrics:
+
+Technique / Treatment	Classification Accuracy (%)	Re-Identification Risk (%)	Execution Time (ms)
+Baseline (Raw Data)	84.04%	0.12%	0.00 ms
+k-Anonymity (k=3)	84.67%	0.00%	18.00 ms
+Differential Privacy (ϵ=1.0)	80.63%	36.99%	15.00 ms
+Key Experimental Findings:
+Utility Preservation: k-Anonymity (k=3) retained high classification utility (84.67%) while effectively suppressing unique quasi-identifier combinations down to a 0.00% re-identification risk across the evaluated feature subset.
+
+Noise Impact on Trade-offs: Differential Privacy (ϵ=1.0) introduced Laplace perturbation, yielding an 80.63% utility accuracy. The perturbation of continuous numerical values created distinct value distribution patterns, producing a calculated local re-ID risk metric of 36.99%.
+
+Execution Performance: Both privacy mechanisms demonstrated high operational efficiency on the UCI Adult benchmark, completing execution in under 20 milliseconds (18 ms for k-Anonymity vs. 15 ms for Differential Privacy).
+
+📜 Acknowledgments & Citation
+
+This project is submitted to Dr. Delina Beh Mei Yin in partial fulfillment of the requirements for IDB30102 Research Methodology, Bachelor of Cybersecurity Technology with Honours, University of Kuala Lumpur (UniKL).
