@@ -132,7 +132,6 @@ This study adopts a data-driven research approach following the **CRISP-DM (Cros
 - 📁 [06_Results_or_Expected_Output/](./06_Results_or_Expected_Output/) — Metric evaluation logs, output figures, and tables
   - 📊 [evaluation_summary.csv](./06_Results_or_Expected_Output/evaluation_summary.csv)
 - 📁 [07_References/](./07_References/) — Reference citations formatted in APA 7th Edition
-```
 
 ---
 
