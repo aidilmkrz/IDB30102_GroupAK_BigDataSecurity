@@ -120,19 +120,18 @@ This study adopts a data-driven research approach following the **CRISP-DM (Cros
 
 ## 📂 Repository Structure
 
-```text
-IDB30102_GroupAK_BigDataSecurity/
-├── README.md                          # Comprehensive project overview and instructions
-├── 01_Research_Papers/                # Primary literature resources and references
-├── 02_Literature_Review/              # Literature review synthesis and matrix
-├── 03_Architecture_and_Flowchart/     # System architecture & CRISP-DM flowcharts
-├── 04_Source_Code/                    # Custom Python implementation
-│   ├── anonymization_framework.py
-│   └── run_evaluation.py
-├── 05_Data_or_Sample_Input/           # Benchmark datasets (adult.data)
-├── 06_Results_or_Expected_Output/     # Metric evaluation logs, output figures, and tables
-│   └── evaluation_summary.csv
-└── 07_References/                     # Reference citations formatted in APA 7th Edition
+- 📄 [README.md](./README.md) — Comprehensive project overview and instructions
+- 📁 [01_Research_Papers/](./01_Research_Papers/) — Primary literature resources and references
+- 📁 [02_Literature_Review/](./02_Literature_Review/) — Literature review synthesis and matrix
+- 📁 [03_Architecture_and_Flowchart/](./03_Architecture_and_Flowchart/) — System architecture & CRISP-DM flowcharts
+- 📁 [04_Source_Code/](./04_Source_Code/) — Custom Python implementation
+  - 🐍 [anonymization_framework.py](./04_Source_Code/anonymization_framework.py)
+  - 🐍 [run_evaluation.py](./04_Source_Code/run_evaluation.py)
+- 📁 [05_Data_or_Sample_Input/](./05_Data_or_Sample_Input/) — Benchmark datasets
+  - 📊 [adult.data](./05_Data_or_Sample_Input/adult.data)
+- 📁 [06_Results_or_Expected_Output/](./06_Results_or_Expected_Output/) — Metric evaluation logs, output figures, and tables
+  - 📊 [evaluation_summary.csv](./06_Results_or_Expected_Output/evaluation_summary.csv)
+- 📁 [07_References/](./07_References/) — Reference citations formatted in APA 7th Edition
 ```
 
 ---
